@@ -12,14 +12,14 @@ components:
       cpuLimit: '2'
       cpuRequest: '1'
       mountSources: true
-commands:
-  - id: setup-konveyor
-    exec:
-      label: "Setup Konveyor Extension"
-      component: java
-      commandLine: |
-        mkdir -p /checode/remote/data/User/globalStorage/konveyor.konveyor/settings
-        cp /projects/handson-llmaas-code-migration-jee/provider-settings.yaml /checode/remote/data/User/globalStorage/konveyor.konveyor/settings/provider-settings.yaml
-      group:
-        kind: build
+#commands:
+#  - id: setup-konveyor
+#    exec:
+#      label: "Setup Konveyor Extension"
+#      component: java
+#      commandLine: |
+#        mkdir -p /checode/remote/data/User/globalStorage/konveyor.konveyor/settings
+#        cp /projects/handson-llmaas-code-migration-jee/provider-settings.yaml /checode/remote/data/User/globalStorage/konveyor.konveyor/settings/provider-settings.yaml
+#      group:
+#        kind: build
 
