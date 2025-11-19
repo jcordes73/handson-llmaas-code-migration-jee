@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"name": "handson-llmaas-code-migration-jee",
+			"path": "/projects/handson-llmaas-code-migration-jee"
+		}
+	],
+	"extensions": {
+		"recommendations": [
+			"konveyor.konveyor"
+		]
+	},
+	"settings": {
+		"workbench.colorTheme": "Winter is Coming (Light)",
+		"workbench.preferredDarkColorTheme": "Winter is Coming (Dark Blue)",
+		"workbench.preferredLightColorTheme": "Winter is Coming (Light)"
+	}
+}
