@@ -4,19 +4,22 @@ attributes:
 metadata:
   name: code-migration
 components:
-  - name: python
+  - name: java
     container:
       image: registry.redhat.io/devspaces/udi-rhel9:3.24
-      volumeMounts:
-        - name: venv
-          path: /home/user/.venv
       memoryLimit: '2Gi'
       memoryRequest: '1Gi'
       cpuLimit: '2'
       cpuRequest: '1'
       mountSources: true
-  - name: venv
-    volume:
-      size: 1G
+commands:
+  - id: setup-konveyor
+    exec:
+      label: "Setup Konveyor Extension"
+      component: java
+      commandLine: |
+        mkdir -p /checode/remote/data/User/globalStorage/konveyor.konveyor/settings
+        cp /projects/handson-llmaas-code-migration-jee/provider-settings.yaml /checode/remote/data/User/globalStorage/konveyor.konveyor/settings/provider-settings.yaml
+      group:
+        kind: build
 
-cp /projects/handson-llmaas-code-migration-jee/provider-settings.yaml /checode/remote/data/User/globalStorage/konveyor.konveyor/settings/provider-settings.yaml
