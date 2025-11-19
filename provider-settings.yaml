@@ -1,0 +1,14 @@
+---
+environment:
+  ALWAYS_APPLIED_KEY: "envvar to be set regardless of which model is active"
+models:
+  OpenAI: &active
+    environment:
+      OPENAI_API_KEY: "<Insert API Key here>"
+    provider: ChatOpenAI
+    args:
+      model: granite-33-8b-instruct
+      configuration:
+        baseURL: "<Insert base URL here>"
+     
+active: *active

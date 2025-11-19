@@ -2,7 +2,7 @@ schemaVersion: 2.2.2
 attributes:
   controller.devfile.io/storage-type: per-workspace
 metadata:
-  name: code-development
+  name: code-migration
 components:
   - name: python
     container:
@@ -18,3 +18,5 @@ components:
   - name: venv
     volume:
       size: 1G
+
+cp /projects/handson-llmaas-code-migration-jee/provider-settings.yaml /checode/remote/data/User/globalStorage/konveyor.konveyor/settings/provider-settings.yaml
